@@ -1,0 +1,61 @@
+python-virtualenv (1.3.3-1) unstable; urgency=low
+
+  * New upstream version... Closes: #518189.
+  * ...which adds a "--relocatable" option.  Closes: #503168.
+  * Update Standards-Version.
+  * Fix package name in man page.  Closes: #508724.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 29 Mar 2009 18:29:53 -0400
+
+python-virtualenv (1.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Update man page.
+  * Make sure /usr/bin/virtualenv uses the default Python interpreter.
+    Closes: #477683.
+
+ -- Jeff Licquia <licquia@debian.org>  Mon, 26 May 2008 00:11:01 -0400
+
+python-virtualenv (1.0-4) unstable; urgency=low
+
+  * Ignore error on deleting unneeded directory /usr/lib, for bugfixed 
+    python-central.  Closes: #472022.
+  * Implement http://wiki.debian.org/Proposals/CopyrightFormat.
+  * Update override paths to reflect new python-central layout.
+
+ -- Jeff Licquia <licquia@debian.org>  Wed, 26 Mar 2008 16:25:57 -0400
+
+python-virtualenv (1.0-3) unstable; urgency=low
+
+  * Fix capitalization mistake.
+  * Switch setuptools dependency to the new python-pkg-resources.
+    Closes: #468706.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 01 Mar 2008 11:17:30 -0500
+
+python-virtualenv (1.0-2) unstable; urgency=low
+
+  * Add missing python-setuptools dependency.  Closes: #462193.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 22 Jan 2008 23:49:54 -0500
+
+python-virtualenv (1.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Jeff Licquia <licquia@debian.org>  Wed, 16 Jan 2008 10:13:52 -0500
+
+python-virtualenv (0.9.2-2) unstable; urgency=low
+
+  * Change the name of the package, by request of ftpmaster.
+  * Update policy version.
+  * Add Homepage and Vcs-* entries to debian/control.
+
+ -- Jeff Licquia <licquia@debian.org>  Wed, 26 Dec 2007 11:35:49 -0500
+
+virtualenv (0.9.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #442394)
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 18 Sep 2007 19:30:00 -0500
+

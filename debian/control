@@ -1,0 +1,22 @@
+Source: python-virtualenv
+Section: python
+Priority: optional
+Maintainer: Jeff Licquia <licquia@debian.org>
+Homepage: http://pypi.python.org/pypi/virtualenv
+Vcs-Bzr: http://bzr.licquia.org/virtualenv/debian
+Vcs-Browser: http://bzr.licquia.org/loggerhead/virtualenv/debian/changes
+Build-Depends: debhelper (>= 5), python-all-dev
+Build-Depends-Indep: python (>= 2.3.5-7), python-central (>= 0.5.0), python-setuptools (>= 0.6c1), xsltproc, docbook-xsl
+Standards-Version: 3.8.1
+XS-Python-Version: all
+
+Package: python-virtualenv
+Architecture: all
+Section: python
+Depends: ${python:Depends}, python-pkg-resources | python-setuptools (<< 0.6c8-1)
+XB-Python-Version: ${python:Versions}
+Description: Python virtual environment creator
+ The virtualenv utility creates virtual Python instances, each invokable
+ with its own Python executable.  Each instance can have different sets
+ of modules, installable via easy_install.  Virtual Python instances can 
+ also be created without root access.

@@ -1,5 +1,6 @@
 rebuild-script.py
 refresh-support-files.py
+setup.cfg
 setup.py
 virtualenv.py
 ./rebuild-script.py
