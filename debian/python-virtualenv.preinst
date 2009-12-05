@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = upgrade ] && dpkg --compare-versions "$2" lt 1.4.3-1; then
+        pycentral pkgremove python-virtualenv
+fi
+
+#DEBHELPER#
+
+exit 0
+

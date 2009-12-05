@@ -4,6 +4,8 @@ python-virtualenv (1.4.3-1) unstable; urgency=low
   * Using dh7 + rules.tiny
   * Moving debian/python-virtualenv.overrides to
     python-virtualenv.lintian-overrides
+  * Added a debian/python-virtualenv.preinst file to get rid of
+    python-central
   * Removed debian/dirs
   * debian/virtualenv.1 has been created
   * Removed debian/virtualenv.xml
@@ -12,18 +14,24 @@ python-virtualenv (1.4.3-1) unstable; urgency=low
       virtualenv.1
   * Removed debian/README.Debian
   * debian/control
+    - Added Vcs-Svn and Vcs-Browser fields
+    - Switched from python to python-all
+    - Removed Section field in Package section.
     - Added dh7 in Build-Depends
-    - Removed useless Build-Depends-Indep field
-    - Switched from python-central to python-support
+    - Switched from python-central to python-support. Closes: #556853.
     - The Maintainer is now DPMT
     - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
+    - Put Jeff Licquia <licquia@debian.org> in Uploaders
     - Bump Standard-Versions to 3.8.3
+    - Added ${misc:Depends} in Depends field
   * debian/compat
     - Bump to 7
   * debian/watch
     - Remove useless comments
+  * debian/rules
+    - Added an override for the upstream changelog
 
- -- Carl Chenet <chaica@ohmytux.com>  Thu, 03 Dec 2009 00:55:13 +0100
+ -- Carl Chenet <chaica@ohmytux.com>  Sat, 05 Dec 2009 13:43:04 +0100
 
 python-virtualenv (1.3.3-1) unstable; urgency=low
 
