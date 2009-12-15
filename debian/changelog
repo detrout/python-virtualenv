@@ -12,17 +12,20 @@ python-virtualenv (1.4.3-1) unstable; urgency=low
   * debian/python-virtualenv.manpages
     - Switched from debian/virtualenv.1.gz to 
       virtualenv.1
-  * Removed debian/README.Debian
+  * Removed debian/README.Debian because it did not contain any
+    Debian-related information
   * debian/control
     - Added Vcs-Svn and Vcs-Browser fields
-    - Switched from python to python-all
+    - Switched from python-all-dev to python-all in b-d
     - Removed Section field in Package section.
+    - Removed xsltproc and docbook-xsl from b-d-i
+    - Removed the or from Depends field
     - Added dh7 in Build-Depends
     - Switched from python-central to python-support. Closes: #556853.
     - The Maintainer is now DPMT
     - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
     - Put Jeff Licquia <licquia@debian.org> in Uploaders
-    - Bump Standard-Versions to 3.8.3
+    - Bump Standard-Versions to 3.8.3 (no changes needed)
     - Added ${misc:Depends} in Depends field
   * debian/compat
     - Bump to 7
@@ -31,7 +34,7 @@ python-virtualenv (1.4.3-1) unstable; urgency=low
   * debian/rules
     - Added an override for the upstream changelog
 
- -- Carl Chenet <chaica@ohmytux.com>  Sat, 05 Dec 2009 13:43:04 +0100
+ -- Carl Chenet <chaica@ohmytux.com>  Tue, 15 Dec 2009 01:19:48 +0100
 
 python-virtualenv (1.3.3-1) unstable; urgency=low
 
