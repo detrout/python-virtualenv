@@ -6,8 +6,8 @@ Uploaders: Carl Chenet <chaica@ohmytux.com>, Jeff Licquia <licquia@debian.org>
 Homepage: http://pypi.python.org/pypi/virtualenv
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-pip/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-pip/trunk/
-Build-Depends: debhelper (>= 7.0.50~), python-all
-Build-Depends-Indep: python (>= 2.3.5-7), python-support, python-setuptools
+Build-Depends: debhelper (>= 7.0.50~), python-all (>= 2.3.5-7)
+Build-Depends-Indep: python-support, python-setuptools
 Standards-Version: 3.8.3
 XS-Python-Version: all
 
