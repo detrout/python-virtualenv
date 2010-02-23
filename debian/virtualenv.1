@@ -27,7 +27,7 @@ virtualenv \- create virtual Python instances
 .sp
 virtualenv creates virtual Python executables, each of which can have its own set of installed modules\&. Programs that require different versions of modules or sets of modules that may be incompatible with others to be installed on the same system without conflicts\&.
 .sp
-The result is a directory containing its own Python executables (in DIR/bin/pythonVER and DIR/bin/python) and its own module directory containing the standard library as installed by the system\&. Additional modules may be installed via setuptools, as invoked from the binary directory (DIR/bin/easy_install)\&. The system\(aas site\-packages directories will be available, but can be overriden with locally\-installed modules\&.
+The result is a directory containing its own Python executables (in DIR/bin/pythonVER and DIR/bin/python) and its own module directory containing the standard library as installed by the system\&. Additional modules may be installed via setuptools, as invoked from the binary directory (DIR/bin/easy_install)\&. The system\(aas site\-packages directories will be available, but can be overridden with locally\-installed modules\&.
 .sp
 In addition, a shell script called "activate" will be installed in the bin directory\&. If sourced, this will cause normal invokations of the Python executable to use the virtual environment\&.
 .sp

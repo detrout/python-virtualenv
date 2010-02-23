@@ -6,14 +6,14 @@ Uploaders: Carl Chenet <chaica@ohmytux.com>, Jeff Licquia <licquia@debian.org>
 Homepage: http://pypi.python.org/pypi/virtualenv
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-pip/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-pip/trunk/
-Build-Depends: debhelper (>= 7.0.50~), python-all (>= 2.3.5-7)
+Build-Depends: debhelper (>= 7.0.50~), python (>= 2.3.5-7)
 Build-Depends-Indep: python-support, python-setuptools
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 XS-Python-Version: all
 
 Package: python-virtualenv
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources, python-setuptools
+Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources, python-setuptools, python-pip
 XB-Python-Version: ${python:Versions}
 Description: Python virtual environment creator
  The virtualenv utility creates virtual Python instances, each invokable
