@@ -1,13 +1,16 @@
 Original source may be found at: http://pypi.python.org/pypi/virtualenv
+
 Files: debian/*
 Copyright: Copyright 2007-2008 Jeff Licquia <licquia@debian.org>
 License: other
     The Debian packaging informatin is licensed under the same license
     as the rest of virtualenv.
+
 Files: support-files/*.egg, support-files/ez_setup.py
 Copyright: Phillip J. Eby
 License: PSF | ZPL
     Copies of these licenses are appended below.
+
 Files: *
 Copyright: Copyright (c) 2007 Ian Bicking and Contributors
 License: other
