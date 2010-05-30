@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export DH_ALWAYS_EXCLUDE=distribute-0.6.8.tar.gz:pip-0.6.3.tar.gz:setuptools-0.6c11-py2.4.egg:setuptools-0.6c11-py2.6.egg
+export DH_ALWAYS_EXCLUDE=distribute-0.6.8.tar.gz:pip-0.7.2.tar.gz:setuptools-0.6c11-py2.4.egg:setuptools-0.6c11-py2.6.egg
 
 %:
 	dh $@

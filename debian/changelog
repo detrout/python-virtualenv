@@ -1,3 +1,14 @@
+python-virtualenv (1.4.9-1) unstable; urgency=low
+
+  * New upstream version. Closes: #563993,#571411
+  * Switched from python-virtualenv.manpages to manpages
+  * debian/control
+    - removed python from Build-Depends
+  * debian/format/source
+    - bump to 3.0 (quilt)
+
+ -- Carl Chenet <chaica@ohmytux.com>  Sun, 30 May 2010 02:32:47 +0200
+
 python-virtualenv (1.4.5-1) unstable; urgency=low
 
   * New upstream release
