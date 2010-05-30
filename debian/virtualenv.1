@@ -59,9 +59,29 @@ Be less verbose; suppress unimportant output\&.
 Clear out a previously\-created virtual Python instance in this location before creating a new one\&.
 .RE
 .PP
+\fB\-p PYTHON_EXE,\-\-python=PYTHON_EXE\fR
+.RS 4
+The Python interpreter to use to create the new environment\&.
+.RE
+.PP
 \fB\-\-no\-site\-packages\fR
 .RS 4
 Don\(aat give access to the global site\-packages modules to the virtual environment\&.
+.RE
+.PP
+\fB\-\-unzip\-setuptools\fR
+.RS 4
+Unzip Setuptools or Distribute when installing it\&.
+.RE
+.PP
+\fB\-\-relocatable\fR
+.RS 4
+Make an EXISTING virtualenv environment relocatable\&.
+.RE
+.PP
+\fB\-\-distribute\fR
+.RS 4
+Use Distribute instead of Setuptools\&.
 .RE
 .SH "AUTHORS"
 .sp
