@@ -1,0 +1,2 @@
+virtualenv_support/ usr/share/pyshared/virtualenv/
+virtualenv.py usr/share/pyshared/virtualenv/
