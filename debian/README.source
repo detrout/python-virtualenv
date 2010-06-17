@@ -1,0 +1,6 @@
+The pip command from the python-pip package should be used to install
+applications in the environment created by virtualenv.
+
+The Virtualenv sources tarball provides the pip sources tarball but 
+we can omit it thanks to the dependency of the python-virtualenv 
+package with the python-pip package.

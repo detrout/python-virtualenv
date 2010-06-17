@@ -2,6 +2,7 @@ python-virtualenv (1.4.9-1) unstable; urgency=low
 
   * New upstream version. Closes: #563993,#571411
   * Switched from python-virtualenv.manpages to manpages
+  * Added README.source
   * Added debian/install
   * Added Depends on python-pip >= 0.7.2
   * debian/control
@@ -13,14 +14,15 @@ python-virtualenv (1.4.9-1) unstable; urgency=low
     - added --distribute,--relocatable,--unzip-setuptools descriptions
   * debian/docs
     - added news.txt 
+    - added debian/README.source
   * debian/rules
-    - removed export DH_ALWAYS_EXCLUDE
+    - added export DH_ALWAYS_EXCLUDE for pip sources tarball
     - added override for auto_clean, auto_build, auto_install, install
       and link
   * debian/python-virtualenv.lintian-overrides
     - Added every *.egg in the override
 
- -- Carl Chenet <chaica@ohmytux.com>  Sat, 12 Jun 2010 14:48:43 +0200
+ -- Carl Chenet <chaica@ohmytux.com>  Fri, 18 Jun 2010 01:28:32 +0200
 
 python-virtualenv (1.4.5-1) unstable; urgency=low
 

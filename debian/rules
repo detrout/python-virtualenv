@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export DH_ALWAYS_EXCLUDE=pip-0.7.2.tar.gz
+
 %:
 	dh $@
 
