@@ -1,2 +1,2 @@
-virtualenv_support/ usr/share/pyshared/virtualenv/
-virtualenv.py usr/share/pyshared/virtualenv/
+virtualenv_support/ usr/share/virtualenv/
+debian/virtualenv usr/bin

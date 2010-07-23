@@ -1,3 +1,28 @@
+python-virtualenv (1.4.9-2) unstable; urgency=low
+
+  * Added debian/virtualenv
+  * Added missing options to manual page
+  * Added debian/patches
+  * Added debian/patches/series
+  * Renamed README.source to README.Debian
+  * Added debian/patches/look_for_external_files
+    - patch to store archives and eggs in /usr/share/virtualenv
+  * debian/control
+    - bump to 3.9.0 (No changes needed)
+    - moved python-pip to Recommends
+  * debian/rules
+    - removed overrides
+    - cleaning pysupport results
+  * debian/install
+    - added debian/virtualenv
+    - corrected path to virtualenv.py. Closes: #588179 
+  * debian/python-virtualenv.lintian-overrides
+    - modified paths to lintian-overrides
+  * debian/copyright
+    - added copyright and license for debian/virtualenv
+
+ -- Carl Chenet <chaica@ohmytux.com>  Fri, 23 Jul 2010 02:27:21 +0200
+
 python-virtualenv (1.4.9-1) unstable; urgency=low
 
   * New upstream version. Closes: #563993,#571411

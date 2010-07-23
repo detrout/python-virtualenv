@@ -3,6 +3,6 @@
 # We don't have control over the egg format, and at any rate these
 # files are not intended to be executed as shell scripts.
 
-python-virtualenv binary: script-not-executable ./usr/share/pyshared/virtualenv/virtualenv_support/setuptools-0.6c11-py2.4.egg
-python-virtualenv binary: script-not-executable ./usr/share/pyshared/virtualenv/virtualenv_support/setuptools-0.6c11-py2.5.egg
-python-virtualenv binary: script-not-executable ./usr/share/pyshared/virtualenv/virtualenv_support/setuptools-0.6c11-py2.6.egg
+python-virtualenv binary: script-not-executable ./usr/share/virtualenv/virtualenv_support/setuptools-0.6c11-py2.4.egg
+python-virtualenv binary: script-not-executable ./usr/share/virtualenv/virtualenv_support/setuptools-0.6c11-py2.5.egg
+python-virtualenv binary: script-not-executable ./usr/share/virtualenv/virtualenv_support/setuptools-0.6c11-py2.6.egg

@@ -8,12 +8,13 @@ Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-virtualenv/trun
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-virtualenv/trunk/
 Build-Depends: debhelper (>= 7.0.50~), python
 Build-Depends-Indep: python-support, python-setuptools
-Standards-Version: 3.8.4
+Standards-Version: 3.9.0
 XS-Python-Version: all
 
 Package: python-virtualenv
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources, python-setuptools, python-pip (>= 0.7.2)
+Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources, python-setuptools
+Recommends: python-pip (>= 0.7.2)
 XB-Python-Version: ${python:Versions}
 Description: Python virtual environment creator
  The virtualenv utility creates virtual Python instances, each invokable
