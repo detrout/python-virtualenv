@@ -1,7 +1,6 @@
 python-virtualenv (1.4.9-2) unstable; urgency=low
 
   * Added debian/virtualenv
-  * Added missing options to manual page
   * Added debian/patches
   * Added debian/patches/series
   * Renamed README.source to README.Debian
@@ -21,7 +20,7 @@ python-virtualenv (1.4.9-2) unstable; urgency=low
   * debian/copyright
     - added copyright and license for debian/virtualenv
 
- -- Carl Chenet <chaica@ohmytux.com>  Fri, 23 Jul 2010 02:27:21 +0200
+ -- Carl Chenet <chaica@ohmytux.com>  Sun, 25 Jul 2010 22:19:42 +0200
 
 python-virtualenv (1.4.9-1) unstable; urgency=low
 
