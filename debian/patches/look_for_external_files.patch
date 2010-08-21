@@ -1,6 +1,18 @@
-# Description: store files in /usr/share/virtualenv/virtualenv_support
+# Description: store files in /usr/share/python-virtualenv/
 # Author: Carl Chenet <chaica@ohmytux.com>
 
+Index: python-virtualenv-1.4.9/setup.py
+===================================================================
+--- python-virtualenv-1.4.9.orig/setup.py
++++ python-virtualenv-1.4.9/setup.py
+@@ -63,6 +63,6 @@ setup(name='virtualenv',
+       license='MIT',
+       py_modules=['virtualenv'],
+       packages=['virtualenv_support'],
+-      package_data={'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']},
++      #package_data={'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']},
+       **kw
+       )
 Index: virtualenv-1.4.9/virtualenv.py
 ===================================================================
 --- virtualenv-1.4.9.orig/virtualenv.py	2010-07-06 01:09:36.000000000 +0200

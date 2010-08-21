@@ -3,7 +3,5 @@
 %:
 	dh $@
 
-override_dh_pysupport:
-	dh_pysupport
-	rm -rf debian/python-virtualenv/usr/lib
-	rm -rf debian/python-virtualenv/usr/share/pyshared/virtualenv_support/
+override_dh_installchangelogs:
+	dh_installchangelogs docs/news.txt

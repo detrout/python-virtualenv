@@ -81,8 +81,14 @@ Make an EXISTING virtualenv environment relocatable\&.
 .PP
 \fB\-\-distribute\fR
 .RS 4
-Use Distribute instead of Setuptools\&.
+Ignored.  Distribute is used by default.  See
+\fB\-\-setuptools\fR to use Setuptools instead of Distribute.
 .RE
+.PP
+\fB\-\-setuptools\fR
+Use Setuptools instead of Distribute. Set environ
+variable VIRTUALENV_USE_SETUPTOOLS to make it the
+default.
 .SH "AUTHORS"
 .sp
 .if n \{\

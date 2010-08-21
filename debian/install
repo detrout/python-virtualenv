@@ -1,2 +1,3 @@
-virtualenv_support/ usr/share/virtualenv/
-debian/virtualenv usr/bin
+virtualenv_support/*.tar.gz /usr/share/python-virtualenv/
+virtualenv_support/*.egg /usr/share/python-virtualenv/
+scripts/virtualenv /usr/bin/

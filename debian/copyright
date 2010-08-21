@@ -1,9 +1,7 @@
 Original source may be found at: http://pypi.python.org/pypi/virtualenv
 
-Files: debian/* except debian/virtualenv
+Files: debian/*
 Copyright: Copyright 2007-2008 Jeff Licquia <licquia@debian.org>
-File: debian/virtualenv
-Copyright: Copyright 2010 Carl Chenet <chaica@ohmytux.com>
 License: other
     The Debian packaging informatin is licensed under the same license
     as the rest of virtualenv.
