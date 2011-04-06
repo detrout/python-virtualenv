@@ -1,9 +1,28 @@
+python-virtualenv (1.6-1) unstable; urgency=low
+
+  * New upstream version. Closes: #617941
+  * debian/control
+    - Removed python-support from Build-Depends-Indep
+    - Bump python version to 2.6.6-3
+    - Removed XB-Python-Version
+    - Bump to 3.9.1.0 (No changes needed) 
+  * debian/python-virtualenv.lintian-overrides
+    - Added overrides for the 2.7 egg
+  * debian/rules
+    - Added --with python2 to dh $@
+  * debian/virtualenv.1
+    - Added the prompt option description
+  * debian/patches/add_distribute.patch
+    - Updated for the new upstream file virtualenv.py
+
+ -- Carl Chenet <chaica@ohmytux.com>  Thu, 07 Apr 2011 01:45:11 +0200
+
 python-virtualenv (1.4.9-3) unstable; urgency=low
 
   * Team upload.
   * Update look_for_external_files.patch to use /usr/share/python-virtualenv
 
- -- Piotr Ożarowski <piotr@debian.org>  Sun, 22 Aug 2010 15:55:07 +0200
+ -- Carl Chenet <chaica@ohmytux.com>  Wed, 06 Apr 2011 22:35:06 +0200
 
 python-virtualenv (1.4.9-2) unstable; urgency=low
 
