@@ -22,7 +22,7 @@ python-virtualenv (1.4.9-3) unstable; urgency=low
   * Team upload.
   * Update look_for_external_files.patch to use /usr/share/python-virtualenv
 
- -- Carl Chenet <chaica@ohmytux.com>  Wed, 06 Apr 2011 22:35:06 +0200
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 22 Aug 2010 15:55:07 +0200
 
 python-virtualenv (1.4.9-2) unstable; urgency=low
 
