@@ -1,23 +1,9 @@
-# Description: store files in /usr/share/python-virtualenv/
-# Author: Carl Chenet <chaica@ohmytux.com>
+Description: store files in /usr/share/python-virtualenv/
+Author: Carl Chenet <chaica@ohmytux.com>
 
-Index: python-virtualenv-1.4.9/setup.py
-===================================================================
---- python-virtualenv-1.4.9.orig/setup.py
-+++ python-virtualenv-1.4.9/setup.py
-@@ -63,6 +63,6 @@ setup(name='virtualenv',
-       license='MIT',
-       py_modules=['virtualenv'],
-       packages=['virtualenv_support'],
--      package_data={'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']},
-+      #package_data={'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']},
-       **kw
-       )
-Index: virtualenv-1.4.9/virtualenv.py
-===================================================================
---- virtualenv-1.4.9.orig/virtualenv.py	2010-07-06 01:09:36.000000000 +0200
-+++ virtualenv-1.4.9/virtualenv.py	2010-07-06 02:20:52.000000000 +0200
-@@ -346,7 +346,8 @@
+--- a/virtualenv.py
++++ b/virtualenv.py
+@@ -576,7 +576,8 @@
  def file_search_dirs():
      here = os.path.dirname(os.path.abspath(__file__))
      dirs = ['.', here,
@@ -27,3 +13,16 @@ Index: virtualenv-1.4.9/virtualenv.py
      if os.path.splitext(os.path.dirname(__file__))[0] != 'virtualenv':
          # Probably some boot script; just in case virtualenv is installed...
          try:
+--- a/setup.py
++++ b/setup.py
+@@ -50,8 +50,8 @@
+       url='http://www.virtualenv.org',
+       license='MIT',
+       py_modules=['virtualenv'],
+-      packages=['virtualenv_support'],
+-      package_data={'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']},
++      #packages=['virtualenv_support'],
++      #package_data={'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']},
+       test_suite='nose.collector',
+       tests_require=['nose', 'Mock'],
+       **kw

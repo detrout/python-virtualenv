@@ -1,3 +1,22 @@
+python-virtualenv (1.7-1) UNRELEASED; urgency=low
+
+  * Team upload.
+  * New upstream version. Closes: #632982
+    - Doesn't import pkg_resources from python2 run with -p python3
+      Closes: #625784, LP: #787822
+  * Refreshed patches.
+  * Bumped standards version to 3.9.2 (no changes needed).
+  * Updated manpage for new options:
+    - --system-site-packages (no longer the default)
+    - --extra-search-dir
+    - --never-download
+  * debian/patches/remove_syspath0_on_reinvoke.patch
+    - Remove the first entry from sys.path to fix failure with -p python3
+  * debian/patches/pep3147-dist-packges.patch
+    - Use the unified python3 dist-packages path in site.py
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 12 Dec 2011 01:44:11 +0200
+
 python-virtualenv (1.6-1) unstable; urgency=low
 
   * New upstream version. Closes: #617941
@@ -5,7 +24,7 @@ python-virtualenv (1.6-1) unstable; urgency=low
     - Removed python-support from Build-Depends-Indep
     - Bump python version to 2.6.6-3
     - Removed XB-Python-Version
-    - Bump to 3.9.1.0 (No changes needed) 
+    - Bump to 3.9.1.0 (No changes needed)
   * debian/python-virtualenv.lintian-overrides
     - Added overrides for the 2.7 egg
   * debian/rules
@@ -39,7 +58,7 @@ python-virtualenv (1.4.9-2) unstable; urgency=low
     - removed overrides
     - cleaning pysupport results
   * debian/install
-    - corrected path to virtualenv.py. Closes: #588179 
+    - corrected path to virtualenv.py. Closes: #588179
   * debian/python-virtualenv.lintian-overrides
     - modified paths to lintian-overrides
 
@@ -67,7 +86,7 @@ python-virtualenv (1.4.9-1) unstable; urgency=low
   * debian/virtualenv.1
     - added --distribute,--relocatable,--unzip-setuptools descriptions
   * debian/docs
-    - added news.txt 
+    - added news.txt
     - added debian/README.source
   * debian/rules
     - added export DH_ALWAYS_EXCLUDE for pip sources tarball
@@ -88,7 +107,7 @@ python-virtualenv (1.4.5-1) unstable; urgency=low
   * debian/virtualenv.1 has been created
   * Removed debian/virtualenv.xml
   * debian/python-virtualenv.manpages
-    - Switched from debian/virtualenv.1.gz to 
+    - Switched from debian/virtualenv.1.gz to
       virtualenv.1
   * Removed debian/README.Debian because it did not contain any
     Debian-related information
@@ -110,7 +129,7 @@ python-virtualenv (1.4.5-1) unstable; urgency=low
     - bump to 7
   * debian/rules
     - added an override for the upstream changelog
-    - using DH_ALWAYS_EXCLUDE for useless files already provided 
+    - using DH_ALWAYS_EXCLUDE for useless files already provided
      by dependencies
   * debian/python-virtualenv.lintian-overrides
     - removing useless overrides on setuptools for py2.4
@@ -151,7 +170,7 @@ python-virtualenv (1.1-1) unstable; urgency=low
 
 python-virtualenv (1.0-4) unstable; urgency=low
 
-  * Ignore error on deleting unneeded directory /usr/lib, for bugfixed 
+  * Ignore error on deleting unneeded directory /usr/lib, for bugfixed
     python-central.  Closes: #472022.
   * Implement http://wiki.debian.org/Proposals/CopyrightFormat.
   * Update override paths to reflect new python-central layout.

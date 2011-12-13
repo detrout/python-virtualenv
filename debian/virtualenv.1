@@ -22,16 +22,30 @@
 virtualenv \- create virtual Python instances
 .SH "SYNOPSIS"
 .sp
-\fBvirtualenv\fR [\fI\-\-version\fR] [\fI\-\-help\fR] [\fI\-\-verbose\fR] [\fI\-\-quiet\fR] [\fI\-\-clear\fR] [\fI\-\-no\-site\-packages\fR] [\fIdestination\-directory\fR]
+\fBvirtualenv\fR [options...] [\fIdestination\-directory\fR]
 .SH "DESCRIPTION"
 .sp
-virtualenv creates virtual Python executables, each of which can have its own set of installed modules\&. Programs that require different versions of modules or sets of modules that may be incompatible with others to be installed on the same system without conflicts\&.
+virtualenv creates virtual Python executables, each of which can have
+its own set of installed modules\&. Programs that require different
+versions of modules or sets of modules that may be incompatible with
+others to be installed on the same system without conflicts\&.
 .sp
-The result is a directory containing its own Python executables (in DIR/bin/pythonVER and DIR/bin/python) and its own module directory containing the standard library as installed by the system\&. Additional modules may be installed via setuptools, as invoked from the binary directory (DIR/bin/easy_install)\&. The system\(aas site\-packages directories will be available, but can be overridden with locally\-installed modules\&.
+The result is a directory containing its own Python executables (in
+\fIDIR\fB/bin/python\fIVER\fR and \fIDIR\fB/bin/python\fR) and its own module
+directory containing the standard library as installed by the system\&.
+Additional modules may be installed via setuptools, as invoked from the
+binary directory (\fIDIR\fB/bin/easy_install\fR)\&. The system\(aas
+site\-packages directories will not be available by default, but can be
+made visible with the \fB\-\-system\-site\-packages\fR option. They can
+then be overridden with locally\-installed modules\&.
 .sp
-In addition, a shell script called "activate" will be installed in the bin directory\&. If sourced, this will cause normal invokations of the Python executable to use the virtual environment\&.
+In addition, a shell script called "activate" will be installed in the
+bin directory\&. If sourced, this will cause normal invocations of the
+Python executable to use the virtual environment\&.
 .sp
-By running the virtualenv command explicitly under the desired Python interpreter, the user can control which version of Python is created in the virtual environment\&.
+By running the virtualenv command explicitly under the desired Python
+interpreter, the user can control which version of Python is created in
+the virtual environment\&.
 .SH "OPTIONS"
 .PP
 \fB\-h, \-\-help\fR
@@ -59,14 +73,22 @@ Be less verbose; suppress unimportant output\&.
 Clear out a previously\-created virtual Python instance in this location before creating a new one\&.
 .RE
 .PP
-\fB\-p PYTHON_EXE,\-\-python=PYTHON_EXE\fR
+\fB\-p \fIPYTHON_EXE\fR,\fB\-\-python\fR=\fIPYTHON_EXE\fR
 .RS 4
 The Python interpreter to use to create the new environment\&.
 .RE
 .PP
 \fB\-\-no\-site\-packages\fR
 .RS 4
-Don\(aat give access to the global site\-packages modules to the virtual environment\&.
+Ignored (the default).
+Don\(aat give access to the global site\-packages modules to the virtual
+environment\&.
+.RE
+.PP
+\fB\-\-system\-site\-packages\fR
+.RS 4
+Give access to the global site\-packages modules to the virtual
+environment\&.
 .RE
 .PP
 \fB\-\-unzip\-setuptools\fR
@@ -86,10 +108,24 @@ Ignored.  Distribute is used by default.  See \fB\-\-setuptools\fR to use Setupt
 .PP
 \fB\-\-setuptools\fR
 .RS 4
-Use Setuptools instead of Distribute. Set environ variable VIRTUALENV_USE_SETUPTOOLS to make it the default\&.
+Use Setuptools instead of Distribute. Set environ variable
+\fBVIRTUALENV_SETUPTOOLS\fR to make it the default\&.
 .RE
 .PP
-\fB\-\-prompt==PROMPT\fR
+\fB\-\-extra\-search\-dir\fR=\fISEARCH_DIRS\fR
+.RS 4
+Directory to search for setuptools/distribute/pip distributions in\&.
+Can be specified multiple times\&.
+.RE
+.PP
+\fB\-\-never\-download\fR
+.RS 4
+Never download anything from the network\&.
+Instead, fail if local distributions of setuptools/distribute/pip are
+not present\&.
+.RE
+.PP
+\fB\-\-prompt\fR==\fIPROMPT\fR
 .RS 4
 Provides an alternative prompt prefix for this environment\&.
 .SH "AUTHORS"
