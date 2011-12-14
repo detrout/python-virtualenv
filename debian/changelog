@@ -1,4 +1,4 @@
-python-virtualenv (1.7-1) UNRELEASED; urgency=low
+python-virtualenv (1.7-1) unstable; urgency=low
 
   * Team upload.
   * New upstream version. Closes: #632982
@@ -15,7 +15,7 @@ python-virtualenv (1.7-1) UNRELEASED; urgency=low
   * debian/patches/pep3147-dist-packges.patch
     - Use the unified python3 dist-packages path in site.py
 
- -- Stefano Rivera <stefanor@debian.org>  Mon, 12 Dec 2011 01:44:11 +0200
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 14 Dec 2011 22:22:53 +0200
 
 python-virtualenv (1.6-1) unstable; urgency=low
 
