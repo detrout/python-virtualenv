@@ -1,3 +1,11 @@
+python-virtualenv (1.7.1.2-1) precise; urgency=low
+
+  * New upstream release.
+  * d/p/pep3147-dist-packges.patch - Dropped, applied upstream
+  * d/p/remove_syspath0_on_reinvoke.patch - Dropped, applied upstream
+
+ -- Clint Byrum <clint@ubuntu.com>  Fri, 20 Apr 2012 11:25:47 -0700
+
 python-virtualenv (1.7-1) unstable; urgency=low
 
   * Team upload.

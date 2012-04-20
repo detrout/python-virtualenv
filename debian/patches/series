@@ -1,4 +1,2 @@
-remove_syspath0_on_reinvoke.patch
-pep3147-dist-packges.patch
 look_for_external_files.patch
 add_distribute.patch
