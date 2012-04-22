@@ -1,8 +1,21 @@
-python-virtualenv (1.7.1.2-1) precise; urgency=low
+python-virtualenv (1.7.1.2-1) UNRELEASED; urgency=low
 
-  * New upstream release.
+  [ Clint Byrum ]
+  * New upstream release. (LP: #986227)
   * d/p/pep3147-dist-packges.patch - Dropped, applied upstream
   * d/p/remove_syspath0_on_reinvoke.patch - Dropped, applied upstream
+
+  [ Stefano Rivera ]
+  * system-python.patch: Use /usr/bin/python in the shebang
+    (Closes: #663228, LP: #737734)
+  * cleanup_tmpdirs.patch: Cleanup temporary working directories
+    (Closes: #661272)
+    - rebuild_script.patch: Include rebuild_script.py. The tmpdir patch
+      touches some embedded files.
+    - Rebuild virtualenv.py during package build.
+  * Bumped standards version to 3.9.3 (no changes needed).
+  * Add myself to Uploaders.
+  * Wrap long lists in debian/control.
 
  -- Clint Byrum <clint@ubuntu.com>  Fri, 20 Apr 2012 11:25:47 -0700
 
