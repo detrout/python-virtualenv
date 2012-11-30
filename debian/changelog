@@ -1,5 +1,6 @@
 python-virtualenv (1.8.4-1) unstable; urgency=low
 
+  * Team upload.
   * New upstream release. (Closes: #691251)
   * debian/patches/{cleanup_tmpdirs,rebuild_script}.patch: Remove as
     these have been applied upstream.
