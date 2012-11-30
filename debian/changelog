@@ -1,20 +1,20 @@
-python-virtualenv (1.8.2-1) UNRELEASED; urgency=low
+python-virtualenv (1.8.4-1) unstable; urgency=low
 
-  * New upstream release.  Remaining changes:
-    + debian/patches/{cleanup_tmpdirs,rebuild_script}.patch: Remove as
-      these have been applied upstream.
-    + debian/patches/add_distribute.patch: Removed, since the new
-      implementation is much simpler.
-    + debian/patches/add_setuptools_option.patch: Added, as the simpler
-      way to add the --setuptools option and $VIRTUALENV_SETUPTOOLS
-      environment variable.  Submitted pull request upstream.
-    + debian/patches/use_distribute.patch: Set the default to distribute.
-      Not forwarded upstream.
-    + debian/pip-test_urlparse_uses_fragment.patch, debian/rules: Remove
-      the patching and repacking of pip-1.1 since the now embedded
-      pip-1.2.1 already contains the change.
+  * New upstream release. (Closes: #691251)
+  * debian/patches/{cleanup_tmpdirs,rebuild_script}.patch: Remove as
+    these have been applied upstream.
+  * debian/patches/add_distribute.patch: Removed, since the new
+    implementation is much simpler.
+  * debian/pip-test_urlparse_uses_fragment.patch, debian/rules: Remove
+    the patching and repacking of pip-1.1 since the now embedded
+    pip-1.2.1 already contains the change.
+  * debian/patches/add_setuptools_option.patch: Added, as the simpler
+    way to add the --setuptools option and $VIRTUALENV_SETUPTOOLS
+    environment variable.  Submitted pull request upstream.
+  * debian/patches/use_distribute.patch: Set the default to distribute.
+    Not forwarded upstream.
 
- -- Barry Warsaw <barry@python.org>  Mon, 12 Nov 2012 17:27:47 -0500
+ -- Barry Warsaw <barry@python.org>  Fri, 30 Nov 2012 15:06:23 -0500
 
 python-virtualenv (1.7.1.2-2) unstable; urgency=low
 
