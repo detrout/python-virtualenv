@@ -1,4 +1,3 @@
 look_for_external_files.patch
-add_setuptools_option.patch
 use_distribute.patch
 system-python.patch
