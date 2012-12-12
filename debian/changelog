@@ -3,6 +3,7 @@ python-virtualenv (1.8.4-2) experimental; urgency=low
   * Team upload.
   * debian/patches/multiarch.patch: Use system multiarch path if available.
     (Closes: #695707)
+  * debian/control: Add Depends on dpkg-dev for dpkg-architecture.
 
  -- Barry Warsaw <barry@python.org>  Wed, 12 Dec 2012 14:10:49 -0500
 
