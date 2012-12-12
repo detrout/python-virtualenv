@@ -19,7 +19,7 @@ Architecture: all
 Depends:
  python-pkg-resources,
  python-setuptools,
- dpkg-dev,
+ gcc | dpkg-dev,
  ${misc:Depends},
  ${python:Depends}
 Recommends: python-pip (>= 0.7.2)
