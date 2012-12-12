@@ -1,0 +1,44 @@
+Description: Use system multiarch path if available.
+Author: Barry Warsaw <barry@python.org>
+Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=695707
+Forwarded: no
+
+--- a/virtualenv_embedded/site.py
++++ b/virtualenv_embedded/site.py
+@@ -83,6 +83,22 @@
+ USER_SITE = None
+ USER_BASE = None
+ 
++# Debian multiarch support.
++# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=695707
++# We can't use subprocess here. :/
++host_architectures = []
++for command in ['dpkg-architecture -qDEB_HOST_MULTIARCH',
++                'gcc -print-multiarch',
++                ]:
++    try:
++        with os.popen(command) as fp:
++            host_arch = fp.read().splitlines()[0]
++            if host_arch not in host_architectures:
++                host_architectures.append(host_arch)
++    except IndexError:
++        pass
++host_architectures.append('plat-%s' % sys.platform)
++
+ _is_pypy = hasattr(sys, 'pypy_version_info')
+ _is_jython = sys.platform[:4] == 'java'
+ if _is_jython:
+@@ -570,9 +586,10 @@
+         #
+         # This is hardcoded in the Python executable, but relative to sys.prefix:
+         for path in paths[:]:
+-            plat_path = os.path.join(path, 'plat-%s' % sys.platform)
+-            if os.path.exists(plat_path):
+-                paths.append(plat_path)
++            for host_arch in host_architectures:
++                plat_path = os.path.join(path, host_arch)
++                if os.path.exists(plat_path):
++                    paths.append(plat_path)
+     elif sys.platform == 'win32':
+         paths = [os.path.join(sys.real_prefix, 'Lib'), os.path.join(sys.real_prefix, 'DLLs')]
+     else:
