@@ -1,0 +1,21 @@
+--- a/virtualenv_embedded/site.py
++++ b/virtualenv_embedded/site.py
+@@ -584,9 +584,15 @@
+                 paths.insert(0, lib64_path)
+             else:
+                 paths.append(lib64_path)
+-        # This is hardcoded in the Python executable, but relative to sys.prefix:
+-        plat_path = os.path.join(sys.real_prefix, 'lib', 'python'+sys.version[:3],
+-                                 'plat-%s' % sys.platform)
++        # This is hardcoded in the Python executable, but relative to
++        # sys.prefix.  Debian change: we need to add the multiarch triplet
++        # here, which is where the real stuff lives.  As per PEP 421, in
++        # Python 3.3+, this lives in sys.implementation, while in Python 2.7
++        # it lives in sys.
++        multiarch = getattr(sys, 'implementation', sys)._multiarch
++        plat_path = os.path.join(sys.real_prefix, 'lib', 
++                                 'python'+sys.version[:3],
++                                 'plat-%s' % multiarch)
+         if os.path.exists(plat_path):
+             paths.append(plat_path)
+     # This is hardcoded in the Python executable, but
