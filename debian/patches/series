@@ -2,4 +2,3 @@ look_for_external_files.patch
 use_distribute.patch
 system-python.patch
 entry-points.patch
-multiarch.patch
