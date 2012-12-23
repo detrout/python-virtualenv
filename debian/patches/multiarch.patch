@@ -1,3 +1,9 @@
+Description: Adjust the platform sys.path entry to include the full
+ multiarch triplet.
+Author: Barry Warsaw <barry@python.org>
+Forwarded: not-needed
+Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=695707
+
 --- a/virtualenv_embedded/site.py
 +++ b/virtualenv_embedded/site.py
 @@ -584,9 +584,15 @@
