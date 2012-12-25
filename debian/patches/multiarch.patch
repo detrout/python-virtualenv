@@ -1,7 +1,7 @@
 Description: Adjust the platform sys.path entry to include the full
  multiarch triplet.  Fallback to the old way for non-multiarch aware Pythons.
 Author: Barry Warsaw <barry@python.org>
-Forwarded: not-needed
+Forwarded: https://github.com/pypa/virtualenv/pull/379
 Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=695707
 
 --- a/virtualenv_embedded/site.py
