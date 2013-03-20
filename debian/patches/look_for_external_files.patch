@@ -1,9 +1,11 @@
 Description: store files in /usr/share/python-virtualenv/
 Author: Carl Chenet <chaica@ohmytux.com>
 
+Index: b/virtualenv.py
+===================================================================
 --- a/virtualenv.py
 +++ b/virtualenv.py
-@@ -582,7 +582,8 @@
+@@ -594,7 +594,8 @@
  def file_search_dirs():
      here = os.path.dirname(os.path.abspath(__file__))
      dirs = ['.', here,
@@ -13,9 +15,23 @@ Author: Carl Chenet <chaica@ohmytux.com>
      if os.path.splitext(os.path.dirname(__file__))[0] != 'virtualenv':
          # Probably some boot script; just in case virtualenv is installed...
          try:
+Index: b/setup.py
+===================================================================
 --- a/setup.py
 +++ b/setup.py
-@@ -86,6 +86,6 @@
+@@ -59,6 +59,11 @@
+ except ImportError:
+     pass
+ 
++if sys.version_info[0] >= 3:
++    setup_params['packages'] = ['virtualenv_support']
++    setup_params['package_data']={
++        'virtualenv_support': ['*-py%s.egg' % sys.version[:3], '*.tar.gz']}
++
+ setup(
+     name='virtualenv',
+     # If you change the version here, change it in virtualenv.py and
+@@ -86,6 +91,6 @@
      url='http://www.virtualenv.org',
      license='MIT',
      py_modules=['virtualenv'],

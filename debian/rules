@@ -1,16 +1,27 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2,python3
 
 override_dh_auto_configure:
 	# Rebuild the embedded parts, we may be quilt patching their sources
-	[ -e virtualenv.py.orig ] || cp virtualenv.py virtualenv.py.orig
 	python bin/rebuild-script.py
 	dh_auto_configure
 
+override_dh_auto_build:
+	dh_auto_build
+	set -ex; for python in $(shell py3versions -r); do \
+		$$python setup.py build ;\
+	done
+
+override_dh_auto_install:
+	dh_auto_install
+	set -ex; for python in $(shell py3versions -r); do \
+		$$python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb ; \
+	done
+
 override_dh_auto_clean:
-	[ ! -e virtualenv.py.orig ] || mv virtualenv.py.orig virtualenv.py
+	-rm -rf build
 	dh_auto_clean
 
 override_dh_installchangelogs:

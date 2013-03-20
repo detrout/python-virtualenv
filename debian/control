@@ -2,6 +2,7 @@ Source: python-virtualenv
 Section: python
 Priority: optional
 X-Python-Version: >= 2.5
+X-Python3-Version: >= 3.2
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders:
  Carl Chenet <chaica@ohmytux.com>,
@@ -10,7 +11,7 @@ Uploaders:
 Homepage: http://pypi.python.org/pypi/virtualenv
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-virtualenv/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-virtualenv/trunk/
-Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3)
+Build-Depends: debhelper (>= 9), python (>= 2.6.6-3), python3 (>= 3.2.3-6)
 Build-Depends-Indep: python-setuptools
 Standards-Version: 3.9.3
 
@@ -27,3 +28,18 @@ Description: Python virtual environment creator
  with its own Python executable.  Each instance can have different sets
  of modules, installable via easy_install.  Virtual Python instances can
  also be created without root access.
+
+Package: python3-virtualenv
+Architecture: all
+Depends:
+ python-pkg-resources,
+ python-setuptools,
+ ${misc:Depends},
+ ${python3:Depends}
+Recommends: python3-pip (>= 0.7.2)
+Description: Python virtual environment creator
+ The virtualenv utility creates virtual Python instances, each invokable
+ with its own Python executable.  Each instance can have different sets
+ of modules, installable via easy_install.  Virtual Python instances can
+ also be created without root access.
+

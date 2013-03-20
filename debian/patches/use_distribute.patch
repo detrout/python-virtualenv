@@ -2,9 +2,11 @@ Description: Use distribute by default.
 Author: Barry Warsaw <barry@python.org>
 Forwarded: no
 
+Index: b/virtualenv.py
+===================================================================
 --- a/virtualenv.py
 +++ b/virtualenv.py
-@@ -858,7 +858,7 @@
+@@ -883,7 +883,7 @@
          'VIRTUALENV_SETUPTOOLS to make it the default ')
  
      # Set this to True to use distribute by default, even in Python 2.
